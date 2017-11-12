@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/master.css">
     <script src="../js/jquery-2.1.3.min.js"></script>
     <script src="../js/jquery.mobile-1.4.5.min.js"></script>
-    <script src="../js/script_cam.js"></script>
+    <script src="../js/preview_catcher.js"></script>
 
     <link rel="icon" type="image/png" href="icons/favicon-196x196.png" sizes="196x196" />
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="icons/iconsapple-touch-icon-152x152.png" />
