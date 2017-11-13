@@ -26,9 +26,9 @@ switch($action) {
 		$password = filter_input(INPUT_POST, 'password');
 		if (is_valid_user_login($username, $password)) {
 		   $_SESSION['is_valid_user'] = true;
-		   include('/view/home.php');
+		   include('/html/ac2/view/home.php');
 		} else {
-		   include('/view/login.php');
+		   include('/html/ac2/view/login.php');
 		}
 		break;
 
