@@ -1,21 +1,21 @@
 <?php include 'view/header.php'; ?>
 
-	<div role="main" class="ui-content">
-      <h1>Login</h1>
+<div role="main" class="ui-content">
+   <h1>Login</h1>
 
-      <form action="." method="post" id="login_form">
-          <input type="hidden" name="action" value="login">
+   <form action="." method="post" id="login_form">
+       <input type="hidden" name="action" value="login">
 
-          <label>Username:</label><br>
-          <input type="text" name="username">
-          <br>
+       <label>Username:</label><br>
+       <input type="text" name="username">
+       <br>
 
-          <label>Password:</label><br>
-          <input type="password" name="password">
-          <br>
+       <label>Password:</label><br>
+       <input type="password" name="password">
+       <br>
 
-          <input type="submit" value="Login">
-      </form>
-	</div>
+       <input type="submit" value="Login">
+   </form>
+</div>
 
 <?php include 'view/footer.php'; ?>

@@ -1,25 +1,26 @@
-<?php include 'view/header.php'; ?>
+<?php
+   include 'view/header.php';
+   require_once('model/valid_user.php');
+ ?>
 
-    <div role="main" class="ui-content">
+<div role="main" class="ui-content">
 
-        <ul data-role="listview" data-inset="true">
-            <li data-role="list-divider">Motion Times</li>
-            <?php
-                try {
-                    $motion_array = file('http://wigshaker.ddns.net:41817/html/motionLog.txt');
-                } catch (Exception $ex) {
-                    $motion_array[0] = 'Error connecting to motionLog.txt';
-                }
+   <ul data-role="listview" data-inset="true">
+      <li data-role="list-divider">Motion Times</li>
+      <?php
+         try {
+            $motion_array = file('http://wigshaker.ddns.net:41817/html/motionLog.txt');
+         } catch (Exception $ex) {
+            $motion_array[0] = 'Error connecting to motionLog.txt';
+         }
 
-                $motion_array_r = array_reverse($motion_array);
-            ?>
-            <?php for ($i=0; $i<count($motion_array_r); $i++): ?>
-                <li><?php echo $motion_array_r[$i]; ?></li>
-            <?php endfor; ?>
-        </ul>
+         $motion_array_r = array_reverse($motion_array);
+      ?>
+      <?php for ($i=0; $i<count($motion_array_r); $i++): ?>
+         <li><?php echo $motion_array_r[$i]; ?></li>
+      <?php endfor; ?>
+   </ul>
 
-
-
-    </div>
+</div>
 
 <?php include 'view/footer.php'; ?>
