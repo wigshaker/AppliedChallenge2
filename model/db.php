@@ -1,5 +1,5 @@
 <?php
-	$dsn = 'mysql:host=http://wigshaker.ddns.net:41817;dbname=cam';
+	$dsn = 'mysql:host=localhost;dbname=cam';
 	$username = 'camuser';
 	$password = '41817';
 
