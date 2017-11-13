@@ -1,4 +1,4 @@
-<?php include '/view/header.php'; ?>
+<?php include 'view/header.php'; ?>
 
     <div role="main" class="ui-content">
         <ul data-role="listview" data-inset="true">
@@ -8,4 +8,4 @@
         </ul>
 
     </div>
-<?php include '/view/footer.php'; ?>
+<?php include 'view/footer.php'; ?>

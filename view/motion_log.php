@@ -1,4 +1,4 @@
-<?php include '/view/header.php'; ?>
+<?php include 'view/header.php'; ?>
 
     <div role="main" class="ui-content">
 
@@ -22,4 +22,4 @@
 
     </div>
 
-<?php include '/view/footer.php'; ?>
+<?php include 'view/footer.php'; ?>
