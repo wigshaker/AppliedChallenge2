@@ -7,7 +7,7 @@
        <input type="hidden" name="action" value="login">
 
        <label>Username:</label><br>
-       <input type="text" name="username">
+       <input type="text" name="username" autofocus>
        <br>
 
        <label>Password:</label><br>
