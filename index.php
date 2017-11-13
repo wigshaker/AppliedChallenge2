@@ -26,28 +26,28 @@ switch($action) {
 		$password = filter_input(INPUT_POST, 'password');
 		if (is_valid_user_login($username, $password)) {
 		   $_SESSION['is_valid_user'] = true;
-		   include('view/home.php');
+		   include('/view/home.php');
 		} else {
-		   include('view/login.php');
+		   include('/view/login.php');
 		}
 		break;
 
 	case 'show_home':
-		include('view/home.php');
+		include('/view/home.php');
 		break;
 
 	case 'show_live_view':
-		include('view/live_view.php');
+		include('/view/live_view.php');
 		break;
 
 	case 'show_motion_log':
-		include('view/motion_log.php');
+		include('/view/motion_log.php');
 		break;
 
 	case 'logout':
 		$_SESSION = array();   // Clear all session data from memory
 		session_destroy();     // Clean up the session ID
-		include('view/login.php');
+		include('/view/login.php');
 		break;
 }
 
