@@ -21,7 +21,7 @@ while (true) {
 		// $last_time = time();
 		$motion_time = filemtime($file_path);
 
-	clearstatcache();
+	// clearstatcache();
 	sleep(5);  //Poll every 5 secs
 }
 ?>
