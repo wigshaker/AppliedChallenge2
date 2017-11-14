@@ -4,7 +4,7 @@ header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
 
 $file_path = '../../motionLog.txt';
-$last_time = max(filemtime($file_path), $_SESSION["last_time"]);
+$last_time = filemtime($file_path);
 $motion_time = '0';
 
 // while (true) {
