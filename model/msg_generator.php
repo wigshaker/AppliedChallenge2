@@ -20,6 +20,9 @@ while (true) {
 		$last_time = time();
 		$motion_time = filemtime($file_path);
 
+		echo "data: {$motion_time}\n\n";
+		ob_flush();
+		flush();
 		//FOR TESTING ONLY!!!!!!!!!!!!!!!!!!!
 		// $time = date('r');
 		// echo "data: The server time is: {$time}\n\n";
