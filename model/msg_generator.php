@@ -9,9 +9,8 @@ $motion_time = filemtime($file_path);
 $now = time();
 
 while (true) {
-	// if ($motion_time > $last_time) {
-	if (true) {
-		echo "data: Most recent log activity: {$motion_time}={$_SESSION["last_time"]}\n\n";
+	if ($motion_time > $last_time) {
+		echo "data: Most recent log activity: {$motion_time}\n\n";
 		ob_flush();
 		flush();
 
