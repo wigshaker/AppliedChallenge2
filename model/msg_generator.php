@@ -18,6 +18,11 @@ while (true) {
 	} else {
 		$last_time = time();
 		$motion_time = filemtime($file_path);
+
+		//FOR TESTING ONLY!!!!!!!!!!!!!!!!!!!
+		echo "data: no activity.\n\n";
+		ob_flush();
+		flush();
 	}
 
 	sleep(10);  //Poll every 10 secs
