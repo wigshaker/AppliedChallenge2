@@ -14,8 +14,8 @@ while (true) {
 		flush();
 
 		$last_time = $motion_time;
-		$_SESSION["last_time"] = $motion_time;
-		session_write_close();
+		// $_SESSION["last_time"] = $motion_time;
+		// session_write_close();
 
 	} // else {
 		// $last_time = time();
