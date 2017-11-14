@@ -16,10 +16,12 @@ while (true) {
 		$last_time = $motion_time;
 		// $_SESSION["last_time"] = $motion_time;
 		// session_write_close();
+		clearstatcache();
 
 	} // else {
 		// $last_time = time();
 		$motion_time = filemtime($file_path);
+		clearstatcache();
       //
 		// echo "data: {$motion_time}\n\n";
 		// ob_flush();
