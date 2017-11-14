@@ -3,7 +3,7 @@ session_start();
 header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
 
-$file_path = '../../motionLog.txt';
+$file_path = '192.168.1.16/html/motionLog.txt';
 $last_time = filemtime($file_path);
 $motion_time = '0';
 
