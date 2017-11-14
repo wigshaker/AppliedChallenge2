@@ -17,7 +17,7 @@ while (true) {
 		$last_time = $motion_time;
 		$_SESSION["last_time"] = $motion_time;
 	} else {
-		$last_time = time();
+		// $last_time = time();
 		$motion_time = filemtime($file_path);
 
 		echo "data: {$motion_time}\n\n";
