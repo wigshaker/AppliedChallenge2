@@ -16,6 +16,8 @@ while (true) {
 
 		$last_time = $motion_time;
 		$_SESSION["last_time"] = $motion_time;
+		session_write_close();
+		
 	} else {
 		// $last_time = time();
 		$motion_time = filemtime($file_path);
