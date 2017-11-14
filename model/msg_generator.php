@@ -26,6 +26,6 @@ header('Cache-Control: no-cache');
 		// flush();
 // 	}
 //
-// 	sleep(5);  //Poll every 5 secs
+	sleep(5);  //Poll every 5 secs
 // }
 ?>
