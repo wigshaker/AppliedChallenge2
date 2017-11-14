@@ -5,7 +5,7 @@ header('Cache-Control: no-cache');
 
 $file_path = '../../motionLog.txt';
 $last_time = max(filemtime($file_path), $_SESSION["last_time"]);
-$motion_time = 0;
+$motion_time = '0';
 
 // while (true) {
 // 	if ($motion_time > $last_time) {
