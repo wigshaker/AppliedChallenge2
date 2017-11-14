@@ -10,7 +10,7 @@ $motion_time = '0';
 while (true) {
 	// if ($motion_time > $last_time) {
 	if (true) {
-		echo "data: Most recent log activity: \n\n";
+		echo "data: Most recent log activity: {$motion_time}\n\n";
 		ob_flush();
 		flush();
 
@@ -21,10 +21,10 @@ while (true) {
 		$motion_time = filemtime($file_path);
 
 		//FOR TESTING ONLY!!!!!!!!!!!!!!!!!!!
-		$time = date('r');
-		echo "data: The server time is: {$time}\n\n";
-		ob_flush();
-		flush();
+		// $time = date('r');
+		// echo "data: The server time is: {$time}\n\n";
+		// ob_flush();
+		// flush();
 	}
 
 	sleep(5);  //Poll every 5 secs
