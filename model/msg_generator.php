@@ -4,7 +4,7 @@ header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
 
 $file_path = '../../motionLog.txt';
-$last_time = $_SESSION["last_time"];
+$last_time = 0;
 $motion_time = filemtime($file_path);
 $now = time();
 
@@ -18,13 +18,13 @@ while (true) {
 		$_SESSION["last_time"] = $motion_time;
 		session_write_close();
 
-	} else {
+	} // else {
 		// $last_time = time();
-		$motion_time = filemtime($file_path);
-
-		echo "data: {$motion_time}\n\n";
-		ob_flush();
-		flush();
+		// $motion_time = filemtime($file_path);
+      //
+		// echo "data: {$motion_time}\n\n";
+		// ob_flush();
+		// flush();
 		//FOR TESTING ONLY!!!!!!!!!!!!!!!!!!!
 		// $time = date('r');
 		// echo "data: The server time is: {$time}\n\n";
