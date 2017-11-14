@@ -29,7 +29,7 @@ while (true) {
 		// echo "data: The server time is: {$time}\n\n";
 		// ob_flush();
 		// flush();
-	}
+	// }
 
 	clearstatcache();
 	sleep(5);  //Poll every 5 secs
