@@ -4,9 +4,8 @@ header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
 
 $file_path = '../../motionLog.txt';
-$last_time = 0;
+$last_time = time();
 $motion_time = filemtime($file_path);
-$now = time();
 
 while (true) {
 	if ($motion_time > $last_time) {
@@ -20,7 +19,7 @@ while (true) {
 
 	} // else {
 		// $last_time = time();
-		// $motion_time = filemtime($file_path);
+		$motion_time = filemtime($file_path);
       //
 		// echo "data: {$motion_time}\n\n";
 		// ob_flush();
