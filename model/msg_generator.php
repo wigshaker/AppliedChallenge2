@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
 
@@ -19,7 +19,7 @@ while (true) {
 	}
 	// $last_time = time();
 	$motion_time = filemtime($file_path);
-	session_write_close();
+	// session_write_close();
 	clearstatcache();
 	sleep(5);  //Poll every 5 secs
 }
