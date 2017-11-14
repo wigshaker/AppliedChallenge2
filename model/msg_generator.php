@@ -18,12 +18,12 @@ while (true) {
 	} else {
 		$last_time = time();
 		$motion_time = filemtime($file_path);
-
-		//FOR TESTING ONLY!!!!!!!!!!!!!!!!!!!
-		$time = date('r');
-		echo "data: The server time is: {$time}\n\n";
-		ob_flush();
-		flush();
+      // 
+		// //FOR TESTING ONLY!!!!!!!!!!!!!!!!!!!
+		// $time = date('r');
+		// echo "data: The server time is: {$time}\n\n";
+		// ob_flush();
+		// flush();
 	}
 
 	sleep(5);  //Poll every 5 secs
