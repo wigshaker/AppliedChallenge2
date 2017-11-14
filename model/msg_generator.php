@@ -8,7 +8,7 @@ $motion_time = filemtime($file_path);
 $last_time = $motion_time;
 
 while (true) {
-	if ($motion_time > $last_time) {
+	if ($motion_time != $last_time) {
 		echo "data: Most recent log activity: {$motion_time}\n\n";
 		ob_flush();
 		flush();
