@@ -15,12 +15,11 @@ while (true) {
 
 		$last_time = $motion_time;
 		// $_SESSION["last_time"] = $motion_time;
-		// session_write_close();
 
 	}
-		// $last_time = time();
-		$motion_time = filemtime($file_path);
-
+	// $last_time = time();
+	$motion_time = filemtime($file_path);
+	session_write_close();
 	clearstatcache();
 	sleep(5);  //Poll every 5 secs
 }
