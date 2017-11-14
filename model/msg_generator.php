@@ -28,29 +28,3 @@ while (true) {
 	sleep(10);  //Poll every 10 secs
 }
 ?>
-
-
-
-
-
-
-<!-- <?php ////////////////////////////////////////////////////////////////
-session_start();
-header('Content-Type: text/event-stream');
-header('Cache-Control: no-cache');
-
-$file_path = $_SESSION['file_path']
-
-session_write_close();
-
-$prev = '';
-
-while(1)
-{
-    $s = file_get_contents($file_path);
-    if($s != $prev){
-        echo "data:{$s}\n\n";
-        @ob_flush();@flush();
-    }
-    sleep(5);   //Poll every 5 secs
-} -->
