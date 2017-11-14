@@ -6,11 +6,12 @@ header('Cache-Control: no-cache');
 $file_path = '../../motionLog.txt';
 $last_time = max(filemtime($file_path), $_SESSION["last_time"]);
 $motion_time = filemtime($file_path);
+$now = time();
 
 while (true) {
 	// if ($motion_time > $last_time) {
 	if (true) {
-		echo "data: Most recent log activity: {$motion_time}\n\n";
+		echo "data: Most recent log activity: {$motion_time} = {$now}\n\n";
 		ob_flush();
 		flush();
 
