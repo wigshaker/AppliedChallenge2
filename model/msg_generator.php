@@ -4,8 +4,8 @@ header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
 
 $file_path = '../../motionLog.txt';
-$last_time = 1;
 $motion_time = filemtime($file_path);
+$last_time = $motion_time;
 
 while (true) {
 	if ($motion_time > $last_time) {
@@ -16,12 +16,10 @@ while (true) {
 		$last_time = $motion_time;
 		// $_SESSION["last_time"] = $motion_time;
 		// session_write_close();
-		clearstatcache();
 
 	} // else {
 		// $last_time = time();
 		$motion_time = filemtime($file_path);
-		clearstatcache();
       //
 		// echo "data: {$motion_time}\n\n";
 		// ob_flush();
@@ -33,6 +31,7 @@ while (true) {
 		// flush();
 	}
 
+	clearstatcache();
 	sleep(5);  //Poll every 5 secs
 }
 ?>
