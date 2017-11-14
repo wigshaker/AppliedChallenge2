@@ -3,13 +3,13 @@ session_start();
 header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
 
-$file_path = '192.168.1.16/html/motionLog.txt';
-$last_time = filemtime($file_path);
-$motion_time = '0';
+// $file_path = '../../motionLog.txt';
+// $last_time = max(filemtime($file_path), $_SESSION["last_time"]);
+// $motion_time = '0';
 
 // while (true) {
 // 	if ($motion_time > $last_time) {
-		echo "data: Most recent log activity: {$motion_time}\n\n";
+		echo "data: Most recent log activity: \n\n";
 		ob_flush();
 		flush();
    //
