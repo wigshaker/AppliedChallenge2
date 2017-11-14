@@ -11,7 +11,7 @@ $now = time();
 while (true) {
 	// if ($motion_time > $last_time) {
 	if (true) {
-		echo "data: Most recent log activity: {$motion_time} = {$now}\n\n";
+		echo "data: Most recent log activity: {$motion_time}={$_SESSION["last_time"]}\n\n";
 		ob_flush();
 		flush();
 
