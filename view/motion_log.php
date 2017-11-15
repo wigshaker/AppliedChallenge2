@@ -16,7 +16,7 @@
       location.reload(true);
    };
 
-   $('#notification-enabled').click(
+   $('#motion_options').click(
       setTimeout(
          function() {
             $('#motion_options').submit()
