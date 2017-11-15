@@ -1,17 +1,18 @@
 <?php
 session_start();
 
-if isset($_SESSION['notification-enabled']) {
-   echo '<!--SSE triggers Motion Vibration-->';
-   echo '<script type="text/javascript">';
-   echo '   var source = new EventSource("model/msg_generator.php");';
-   echo '   source.onmessage = function(event) {';
-   echo '      navigator.vibrate(300);';
-   echo '   };';
-   echo '</script>';
-} else {
-   $_SESSION['notification-enabled'] = false;
-   session_write_close();
+$script_message = <<<'MESSAGE'
+<!--SSE triggers Motion Vibration-->
+<script type="text/javascript">
+   var source = new EventSource("model/msg_generator.php");
+   source.onmessage = function(event) {
+      navigator.vibrate(300);
+   };
+</script>
+MESSAGE;
+
+if $_SESSION['notification-enabled'] === '1' {
+   echo $script_message;
 }
 
 ?>
