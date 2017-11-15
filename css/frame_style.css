@@ -1,0 +1,10 @@
+/*
+    Created on : Nov 9, 2017, 1:45:07 PM
+    Author     : wigshaker
+*/
+
+* {box-sizing: border-box;}
+
+.ui-content {padding: 0;}
+
+.ui-page-theme-a .ui-bar-inherit {background-color: mediumaquamarine;}

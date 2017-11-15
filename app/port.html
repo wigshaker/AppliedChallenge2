@@ -5,12 +5,12 @@
       <meta charset="utf-8">
       <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
       <link rel="stylesheet" href="../css/jquery.mobile-1.4.5.min.css">
-      <link rel="stylesheet" href="../css/master.css">
+      <link rel="stylesheet" href="../css/frame_style.css">
       <script src="../js/jquery-2.1.3.min.js"></script>
       <script src="../js/jqMobile_overrides.js"></script>
       <script src="../js/jquery.mobile-1.4.5.min.js"></script>
       <!-- <script src="../js/preview_catcher.js"></script> -->
-      <script src="../js/notification_handler.js"></script>
+      <!-- <script src="../js/notification_handler.js"></script> -->
 
       <link rel="icon" type="image/png" href="icons/favicon-196x196.png" sizes="196x196" />
       <link rel="apple-touch-icon-precomposed" sizes="152x152" href="icons/iconsapple-touch-icon-152x152.png" />
@@ -21,7 +21,7 @@
       <link rel="apple-touch-icon-precomposed" sizes="57x57" href="icons/apple-touch-icon-57x57.png" />
    </head>
 
-   <body onload="setTimeout('init();', 100);">
+   <body>
    <!--
    Clay Caylor
    index.html
@@ -29,24 +29,9 @@
    Brown
    10/25/2017
    -->
-      <div data-role="page">
-
-         <div data-role="header" data-position='fixed' data-fullscren='true'>
-            <h1>to be continued</h1>
-         </div>
-
-
-         <div role="main" class="ui-content">
-         <iframe src="http://wigshaker.ddns.net:41817/html/ac2/index.php" width="1000" height="600">
-			</iframe>
-         </div>
-
-         <div data-role='footer' data-position='fixed' data-fullscreen='true'>
-            <h4>sleeeeeeeeeeep</h4>
-         </div>
-
-      </div>
-
+      <iframe id="main-frame" width="100%" height="100%"
+         src="http://wigshaker.ddns.net:41817/html/ac2/index.php">
+   	</iframe>
    </body>
 
 </html>
