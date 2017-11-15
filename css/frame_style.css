@@ -8,3 +8,10 @@
 .ui-content {padding: 0;}
 
 .ui-page-theme-a .ui-bar-inherit {background-color: mediumaquamarine;}
+
+#main-frame {
+   border: none;
+   overflow: hidden;
+   width: 100vw;
+   height: 99.9vh;
+}

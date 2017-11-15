@@ -1,4 +1,4 @@
-/* 
+/*
     Created on : Nov 9, 2017, 1:45:07 PM
     Author     : wigshaker
 */
@@ -9,7 +9,7 @@
 
 #mjpeg_dest {margin: 0;
     width: auto;
-    height: 100vh;
+    height: 99.9vh;
     }
 
 .ui-page-theme-a .ui-bar-inherit {background-color: mediumaquamarine;}
