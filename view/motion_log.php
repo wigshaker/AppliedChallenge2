@@ -20,11 +20,12 @@
 <div role="main" class="ui-content">
 
    <form id="motion_options" action="index.php?action=show_motion_log" method="post">
-      <input type="hidden" name="notification-enabled[0]" value="false">
+      <input type="hidden" name="notification-enabled" value="false">
       <label for="notification-enabled">Motion notifications:</label>
       <input type="checkbox" data-role="flipswitch" onchange="$('#motion_options').submit()"
-         name="notification-enabled[0]" id="notification-enabled" value="true"
-         <?php if ($_SESSION[notification-enabled] === true) {echo 'checked';}?>>
+         name="notification-enabled" id="notification-enabled" value="true"
+         data-on-text="On" data-off-text="Off"
+         <?php if ($_SESSION[notification-enabled] == true) {echo 'checked';} ?>>
    </form>
 
    <?php echo "session:{$_SESSION[notification-enabled]}"; ?>

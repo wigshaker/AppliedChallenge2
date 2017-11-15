@@ -46,7 +46,7 @@ switch($action) {
 		// } else {
 		// 	$_SESSION['notification-enabled'] = 0;
 		// }
-		if ($_POST['notification-enabled[0]'] == true) {
+		if ($_POST['notification-enabled'] == true) {
 			 $_SESSION['notification-enabled'] = true;
 		 }
 		 // elseif ($_POST['notification-enabled'] == false) {
