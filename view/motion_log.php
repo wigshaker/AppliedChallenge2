@@ -15,14 +15,21 @@
       // navigator.vibrate(300);
       location.reload(true);
    };
+
+   $('#notification-enabled').click = setTimeout(
+      function(e) {
+         $('#motion_options').submit()
+      }, 500)
+      //       onchange="$('#motion_options').submit()"
 </script>
+
 
 <div role="main" class="ui-content">
 
    <form id="motion_options" action="index.php?action=show_motion_log" method="post">
       <input type="hidden" name="notification-enabled" value="false">
       <label for="notification-enabled">Motion notifications:</label>
-      <input type="checkbox" data-role="flipswitch" onchange="$('#motion_options').submit()"
+      <input type="checkbox" data-role="flipswitch"
          name="notification-enabled" id="notification-enabled" value="true"
          data-on-text="On" data-off-text="Off"
          <?php if ($_SESSION[notification-enabled] == true) {echo 'checked';} ?>>
