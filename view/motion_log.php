@@ -1,9 +1,15 @@
 <?php
+   session_start();
    include 'view/header.php';
    require_once('model/valid_user.php');
+
+   if (isset($_POST['notification-enabled'])) {
+       $_SESSION['notification-enabled'] = $_POST['notification-enabled'];
+    }
  ?>
 
 <script type="text/javascript">
+   //SSE triggers Motion Vibration and Log updater
    var source = new EventSource("model/msg_generator.php");
    source.onmessage = function(event) {
       navigator.vibrate(300);
@@ -12,6 +18,13 @@
 </script>
 
 <div role="main" class="ui-content">
+
+   <form id="motion_options" action=".?action=show_motion_log" method="post">
+      <label for="notification-enabled">Motion notifications:</label>
+      <input type="checkbox" data-role="flipswitch" onchange="$('#motion_options').submit()"
+         name="notification-enabled" id="notification-enabled"
+         <?php if (isset($_SESSION[notification-enabled])) {echo "checked";}?>>
+   </form>
 
    <ul data-role="listview" data-inset="true">
       <li data-role="list-divider">Motion Times</li>

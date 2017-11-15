@@ -4,6 +4,7 @@
 session_start();
 require_once('model/db.php');
 require_once('model/user_db.php');
+include('model/notification_handler.php');
 
 // Get the action to perform
 $action = filter_input(INPUT_POST, 'action');
@@ -46,6 +47,7 @@ switch($action) {
 
 	case 'logout':
 		$_SESSION = array();   // Clear all session data from memory
+		session_write_close();
 		session_destroy();     // Clean up the session ID
 		include('view/login.php');
 		break;
