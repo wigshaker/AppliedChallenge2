@@ -34,7 +34,7 @@
       <input type="checkbox" data-role="flipswitch"
          name="notification-enabled" id="notification-enabled"
          data-on-text="On" data-off-text="Off"
-         <?php if ($_POST[notification-enabled] === "1") {echo 'checked';} ?>>
+         <?php if ($_POST[notification-enabled] == 1) {echo 'checked';} ?>>
       <input type="submit" name="submit" value="Set">
    </form>
 
