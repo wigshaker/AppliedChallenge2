@@ -16,12 +16,12 @@
       location.reload(true);
    };
 
-   $('#motion_options').click(
-      setTimeout(
-         function() {
-            $('#motion_options').submit()
-         }, 500)
-      )
+   // $('#motion_options').click(
+   //    setTimeout(
+   //       function() {
+   //          $('#motion_options').submit()
+   //       }, 500)
+   //    )
       //       onchange="$('#motion_options').submit()"
 </script>
 
@@ -35,6 +35,7 @@
          name="notification-enabled" id="notification-enabled" value="true"
          data-on-text="On" data-off-text="Off"
          <?php if ($_SESSION[notification-enabled] == true) {echo 'checked';} ?>>
+      <input type="submit" name="submit" value="Set">
    </form>
 
    <?php echo "session:{$_SESSION[notification-enabled]}"; ?>
