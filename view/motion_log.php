@@ -7,7 +7,7 @@
    var source = new EventSource("model/msg_generator.php");
    source.onmessage = function(event) {
       navigator.vibrate(300);
-      location.reload(forceGet)
+      location.reload(true);
    };
 </script>
 
