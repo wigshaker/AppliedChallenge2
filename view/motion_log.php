@@ -33,9 +33,9 @@
       <label for="notification-enabled">Motion notifications:</label>
       <input type="checkbox" data-role="flipswitch"
          name="notification-enabled" id="notification-enabled"
-         data-on-text="On" data-off-text="Off" value="1"
+         data-on-text="On" data-off-text="Off" value="1" onchange="$('#motion_options').submit()"
          <?php if ($_SESSION['notification-enabled'] === '1') {echo 'checked';} ?>>
-      <input type="submit" name="submit" value="Set">
+      <!-- <input type="submit" name="submit" value="Set"> -->
    </form>
 
    <?php echo "session:{$_SESSION['notification-enabled']}";
