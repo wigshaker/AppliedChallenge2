@@ -41,14 +41,14 @@ switch($action) {
 		break;
 
 	case 'show_motion_log':
-		if (isset($_POST['notification-enabled'])) {
-			$_SESSION['notification-enabled'] = filter_input(INPUT_POST, 'notification-enabled');
-		}
-		// if ($_POST['notification-enabled'] = true) {
-		// 	 $_SESSION['notification-enabled'] = true;
-		//  } elseif ($_POST['notification-enabled'] = false) {
-		//  	$_SESSION['notification-enabled'] = false;
-		//  }
+		// if (isset($_POST['notification-enabled'])) {
+		// 	$_SESSION['notification-enabled'] = filter_input(INPUT_POST, 'notification-enabled');
+		// }
+		if ($_POST['notification-enabled'] == 0) {
+			 $_SESSION['notification-enabled'] = 0;
+		 } elseif ($_POST['notification-enabled'] == 1) {
+		 	$_SESSION['notification-enabled'] = 1;
+		 }
 		include('view/motion_log.php');
 		break;
 
