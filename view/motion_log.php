@@ -33,8 +33,7 @@
       <label for="notification-enabled">Motion notifications:</label>
       <input type="checkbox" data-role="flipswitch"
          name="notification-enabled" id="notification-enabled"
-         data-on-text="On" data-off-text="Off"
-         <?php if ($_POST[notification-enabled] == 1) {echo 'checked';} ?>>
+         data-on-text="On" data-off-text="Off" checked>
       <input type="submit" name="submit" value="Set">
    </form>
 
