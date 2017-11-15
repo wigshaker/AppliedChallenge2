@@ -20,6 +20,7 @@
 <div role="main" class="ui-content">
 
    <form id="motion_options" action=".?action=show_motion_log" method="post">
+      <input type="hidden" name="notification-enabled" value="0">
       <label for="notification-enabled">Motion notifications:</label>
       <input type="checkbox" data-role="flipswitch" onchange="$('#motion_options').submit()"
          name="notification-enabled" id="notification-enabled" value="1"
