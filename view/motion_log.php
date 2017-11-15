@@ -3,9 +3,9 @@
    include 'view/header.php';
    require_once('model/valid_user.php');
 
-   if (isset($_POST['notification-enabled']) = true) {
-       $_SESSION['notification-enabled'] = true;
-    }
+   // if (isset($_POST['notification-enabled']) = true) {
+   //     $_SESSION['notification-enabled'] = true;
+   //  }
  ?>
 
 <script type="text/javascript">
@@ -23,7 +23,7 @@
       <label for="notification-enabled">Motion notifications:</label>
       <input type="checkbox" data-role="flipswitch" onchange="$('#motion_options').submit()"
          name="notification-enabled" id="notification-enabled"
-         <?php if (isset($_SESSION[notification-enabled])) {echo "checked";}?>>
+         <?php if ($_SESSION[notification-enabled] = true) {echo "checked";}?>>
    </form>
 
    <ul data-role="listview" data-inset="true">

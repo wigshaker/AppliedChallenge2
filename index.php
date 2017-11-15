@@ -42,6 +42,9 @@ switch($action) {
 		break;
 
 	case 'show_motion_log':
+		if ($_POST['notification-enabled'] = true) {
+			 $_SESSION['notification-enabled'] = true;
+		 }
 		include('view/motion_log.php');
 		break;
 
