@@ -18,7 +18,7 @@
 
    $('#notification-enabled').click(
       setTimeout(
-         function(e) {
+         function() {
             $('#motion_options').submit()
          }, 500)
       )
