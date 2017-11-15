@@ -34,11 +34,13 @@
       <input type="checkbox" data-role="flipswitch"
          name="notification-enabled" id="notification-enabled" value="true"
          data-on-text="On" data-off-text="Off"
-         <?php if ($_SESSION[notification-enabled] == true) {echo 'checked';} ?>>
+         <?php if ($_POST[notification-enabled] == true) {echo 'checked';} ?>>
       <input type="submit" name="submit" value="Set">
    </form>
 
-   <?php echo "session:{$_SESSION[notification-enabled]}"; ?>
+   <?php echo "session:{$_SESSION[notification-enabled]}";
+      echo "post:{$_POST[notification-enabled]}";
+    ?>
 
    <ul data-role="listview" data-inset="true">
       <li data-role="list-divider">Motion Times</li>
