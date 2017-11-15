@@ -26,6 +26,8 @@
          <?php if ($_SESSION[notification-enabled] = true) {echo "checked";}?>>
    </form>
 
+   <?php echo "session:{$_SESSION[notification-enabled]}"; ?>
+
    <ul data-role="listview" data-inset="true">
       <li data-role="list-divider">Motion Times</li>
       <?php
