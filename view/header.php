@@ -9,7 +9,7 @@
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/jqMobile_overrides.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
-    <?php include('model/notification_handler.php') ?>
+    <?php include('model/notification_handler.php'); ?>
 
     <link rel="icon" type="image/png" href="icons/favicon-196x196.png" sizes="196x196" />
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="icons/iconsapple-touch-icon-152x152.png" />
