@@ -29,12 +29,12 @@
 <div role="main" class="ui-content">
 
    <form id="motion_options" action="index.php?action=show_motion_log" method="post">
-      <input type="hidden" name="notification-enabled" value="false">
+      <input type="hidden" name="notification-enabled" value="0">
       <label for="notification-enabled">Motion notifications:</label>
       <input type="checkbox" data-role="flipswitch"
-         name="notification-enabled" id="notification-enabled" value="true"
+         name="notification-enabled" id="notification-enabled" value="1"
          data-on-text="On" data-off-text="Off"
-         <?php if ($_POST[notification-enabled] === "true") {echo 'checked';} ?>>
+         <?php if ($_POST[notification-enabled] === "1") {echo 'checked';} ?>>
       <input type="submit" name="submit" value="Set">
    </form>
 
