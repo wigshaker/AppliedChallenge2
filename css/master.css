@@ -10,6 +10,7 @@
 #mjpeg_dest {margin: 0;
     width: auto;
     height: 99.9vh;
+    text-align: center;
     }
 
 .ui-page-theme-a .ui-bar-inherit {background-color: mediumaquamarine;}
