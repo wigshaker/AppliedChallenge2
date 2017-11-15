@@ -1,5 +1,4 @@
 <?php
-
 // Start session management and include necessary functions
 session_start();
 require_once('model/db.php');
@@ -43,7 +42,7 @@ switch($action) {
 
 	case 'show_motion_log':
 		if (isset($_POST['notification-enabled'])) {
-			$_SESSION['notification-enabled'] = filter_input((INPUT_POST, 'notification-enabled'));
+			$_SESSION['notification-enabled'] = filter_input(INPUT_POST, 'notification-enabled');
 		}
 		// if ($_POST['notification-enabled'] = true) {
 		// 	 $_SESSION['notification-enabled'] = true;
