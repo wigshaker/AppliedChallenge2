@@ -16,10 +16,12 @@
       location.reload(true);
    };
 
-   $('#notification-enabled').click = setTimeout(
-      function(e) {
-         $('#motion_options').submit()
-      }, 500)
+   $('#notification-enabled').click(
+      setTimeout(
+         function(e) {
+            $('#motion_options').submit()
+         }, 500)
+      )
       //       onchange="$('#motion_options').submit()"
 </script>
 
