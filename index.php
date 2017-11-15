@@ -48,9 +48,10 @@ switch($action) {
 		// }
 		if ($_POST['notification-enabled'] == true) {
 			 $_SESSION['notification-enabled'] = true;
-		 } elseif ($_POST['notification-enabled'] == false) {
-		 	$_SESSION['notification-enabled'] = false;
 		 }
+		 // elseif ($_POST['notification-enabled'] == false) {
+		 // 	$_SESSION['notification-enabled'] = false;
+		 // }
 		include('view/motion_log.php');
 		break;
 
