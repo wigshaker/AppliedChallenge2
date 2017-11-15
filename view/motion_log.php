@@ -12,7 +12,7 @@
    //SSE triggers Motion Vibration and Log updater
    var source = new EventSource("model/msg_generator.php");
    source.onmessage = function(event) {
-      navigator.vibrate(300);
+      // navigator.vibrate(300);
       location.reload(true);
    };
 </script>
