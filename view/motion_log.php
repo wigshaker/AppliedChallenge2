@@ -14,6 +14,7 @@
    source.onmessage = function(event) {
       // navigator.vibrate(300);
       location.reload(true);
+      $('#log-list').load(document.URL +  ' #log-list');
    };
 
    // $('#motion_options').click(
@@ -35,14 +36,9 @@
          name="notification-enabled" id="notification-enabled"
          data-on-text="On" data-off-text="Off" value="1" onchange="$('#motion_options').submit()"
          <?php if ($_SESSION['notification-enabled'] === '1') {echo 'checked';} ?>>
-      <!-- <input type="submit" name="submit" value="Set"> -->
    </form>
 
-   <?php echo "session:{$_SESSION['notification-enabled']}";
-      echo "post:{$_POST['notification-enabled']}";
-    ?>
-
-   <ul data-role="listview" data-inset="true">
+   <ul data-role="listview" data-inset="true" id="log-list">
       <li data-role="list-divider">Motion Times</li>
       <?php
          try {
