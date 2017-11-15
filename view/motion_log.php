@@ -3,6 +3,14 @@
    require_once('model/valid_user.php');
  ?>
 
+<script type="text/javascript">
+   var source = new EventSource("model/msg_generator.php");
+   source.onmessage = function(event) {
+      navigator.vibrate(300);
+      location.reload(forceGet)
+   };
+</script>
+
 <div role="main" class="ui-content">
 
    <ul data-role="listview" data-inset="true">
@@ -16,7 +24,7 @@
 
          $motion_array_r = array_reverse($motion_array);
       ?>
-      <?php for ($i=0; $i<count($motion_array_r); $i++): ?>
+      <?php for ($i=0; $i<30; $i++): ?>
          <li><?php echo $motion_array_r[$i]; ?></li>
       <?php endfor; ?>
    </ul>
