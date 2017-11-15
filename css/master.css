@@ -10,8 +10,9 @@
 #mjpeg_dest {margin: 0;
    width: auto;
    height: 99.9vh;
-   min-width: 100%;
-   min-height: 100%;
+   /*min-width: 100%;
+   min-height: 100%;*/
+   
    /*margin-left: 50%;
    transform: translateX(-50%);*/
    }
