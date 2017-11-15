@@ -8,9 +8,10 @@
 .ui-content {padding: 0;}
 
 #mjpeg_dest {margin: 0;
-    width: auto;
-    height: 99.9vh;
-    text-align: center;
-    }
+   width: auto;
+   height: 99.9vh;
+   margin-left: 50%;
+   transform: translateX(-50%);
+   }
 
 .ui-page-theme-a .ui-bar-inherit {background-color: mediumaquamarine;}
