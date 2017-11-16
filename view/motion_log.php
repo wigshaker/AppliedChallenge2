@@ -15,18 +15,11 @@
       // navigator.vibrate(300);
       // location.reload(true);
       $('#log-list').load(document.URL +  ' #log-list');
+      $('#log-list').listview();
    };
-   source.onmessage = setTimeout(function(event)  {
-      $('#log-list').listview('refresh');
-   }, 200);
-
-   // $('#motion_options').click(
-   //    setTimeout(
-   //       function() {
-   //          $('#motion_options').submit()
-   //       }, 500)
-   //    )
-      //       onchange="$('#motion_options').submit()"
+   // source.onmessage = setTimeout(function(event)  {
+   //    $('#log-list').listview('refresh');
+   // }, 200);
 </script>
 
 
