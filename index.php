@@ -56,7 +56,7 @@ switch($action) {
 			include('view/home.php');
 		} else {
 			include('view/add_user.php');
-			$add_message = 'Hit index, came back.'
+			$add_message = 'Hit index, came back.';
 		}
 		break;
 
