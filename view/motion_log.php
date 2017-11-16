@@ -14,11 +14,11 @@
    source.onmessage = function(event) {
       // navigator.vibrate(300);
       // location.reload(true);
-      complete: function() {
-        $("#log-list").listview("refresh");
-      }
       $('#log-list').load(document.URL +  ' #log-list');
    };
+   source.onmessage = setTimeout(function(event)  {
+      $('#log-list').listview('refresh');
+   }, 200);
 
    // $('#motion_options').click(
    //    setTimeout(
