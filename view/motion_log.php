@@ -14,8 +14,9 @@
    source.onmessage = function(event) {
       // navigator.vibrate(300);
       // location.reload(true);
-      $('#log-list').load(document.URL +  ' #log-list');
-      $('#log-list').listview();
+      $('#log-list').load(document.URL +  ' #log-list', function() {
+         $('#log-list').listview('refresh');
+         });
    };
    // source.onmessage = setTimeout(function(event)  {
    //    $('#log-list').listview('refresh');
