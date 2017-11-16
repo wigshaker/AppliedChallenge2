@@ -54,9 +54,11 @@ switch($action) {
 		// $pass_add_2 = filter_input(INPUT_POST, 'pass_add_2');
 		if (isset($_SESSION['user_was_added']) && $_SESSION['user_was_added'] === $user_add) {
 			include('view/home.php');
+			break;
 		} else {
 			$add_message = 'Hit index, came back.';
 			include('view/add_user.php');
+			break;
 		}
 		break;
 
