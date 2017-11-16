@@ -15,7 +15,7 @@
       // navigator.vibrate(300);
       // location.reload(true);
       $('#log-list').load(document.URL +  ' #log-list');
-      complete: function() {$("#log-list").listview("refresh");}
+      complete: $('#log-list').load() {$("#log-list").listview("refresh");}
    };
 
    // $('#motion_options').click(
