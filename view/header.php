@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="themes/Lamb1.min.css" />
       <link rel="stylesheet" href="css/master.css">
       <script src="js/jquery-2.1.3.min.js"></script>
-      <!-- <script src="js/jqMobile_overrides.js"></script> -->
+      <script src="js/jqMobile_overrides.js"></script>
       <script src="js/jquery.mobile-1.4.5.min.js"></script>
       <?php include('model/notification_handler.php'); ?> <!-- Notification Javascript -->
 
