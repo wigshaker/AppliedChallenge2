@@ -5,16 +5,24 @@
 
 * {box-sizing: border-box;}
 
-.ui-content {padding: 0;}
+/*.ui-content {padding: 0;}*/
 
-#mjpeg_dest {margin: 0;
+#mjpeg_dest {
+   margin: 0;
    width: auto;
    height: 99.9vh;
    /*min-width: 100%;
    min-height: 100%;*/
-   
+
    /*margin-left: 50%;
    transform: translateX(-50%);*/
    }
 
-.ui-page-theme-a .ui-bar-inherit {background-color: mediumaquamarine;}
+/*.ui-page-theme-a .ui-bar-inherit {background-color: mediumaquamarine;}*/
+@media screen and (orientation: portrait)  {
+   #mjpeg_dest {
+      margin: 0;
+      width: 99.9vw;
+      height: auto;
+      }
+}
