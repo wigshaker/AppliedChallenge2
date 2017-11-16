@@ -31,5 +31,6 @@
       <div data-role="page">
 
       <div data-role="header" data-position='fixed'>
+         <a href="?action=show_home" data-icon="home">Home</a>
          <h1>Lamb Cam</h1>
       </div>
