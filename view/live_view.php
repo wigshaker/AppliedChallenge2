@@ -5,7 +5,7 @@
 
 <script src="js/preview_catcher.js"></script>
 <script type="text/javascript">
-   $(document).on("pageinit",".ui-content",setTimeout('init();', 100););
+   $(document).on("pageinit",".ui-content",setTimeout('init();', 100));
 </script>
   <!-- onload="setTimeout('init();', 100);" -->
 <div role="main" class="ui-content">
