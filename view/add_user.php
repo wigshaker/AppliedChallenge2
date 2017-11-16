@@ -16,15 +16,15 @@ if (isset($user_add) && $pass_add === $pass_add_2) {
 
 } elseif ($pass_add !== $pass_add_2) {
    $add_message = 'Passwords do not match.';
-   $_SESSION['user_was_added'] = '';
+   unset($_SESSION['user_was_added']);
 
 } elseif (!isset($user_add)) {
    $add_message = "Let's get you signed up!.";
-   $_SESSION['user_was_added'] = '';
+   unset($_SESSION['user_was_added']);
 
 } else {
    $add_message = 'Other error encountered.';
-   $_SESSION['user_was_added'] = '';
+   unset($_SESSION['user_was_added']);
 }
 
 include 'view/header.php';
