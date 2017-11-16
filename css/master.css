@@ -28,9 +28,6 @@
       }
 
    #video_container {
-       display: flex;
        justify-content: center;
-       height: 400px; /* or other desired height */
-       overflow: hidden;
       }
    }
