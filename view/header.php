@@ -4,6 +4,7 @@
       <title>Clay Caylor | Info2439 | Applied Challenge 2</title>
       <meta charset="utf-8">
       <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+      <link rel="stylesheet" href="themes/Lamb1.min.css" />
       <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
       <link rel="stylesheet" href="css/master.css">
       <script src="js/jquery-2.1.3.min.js"></script>
