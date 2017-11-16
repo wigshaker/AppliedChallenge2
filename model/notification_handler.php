@@ -11,7 +11,7 @@ $script_message = <<<'MESSAGE'
 </script>
 MESSAGE;
 
-if $_SESSION['notification-enabled'] === '1' {
+if ($_SESSION['notification-enabled'] === '1') {
    echo $script_message;
 }
 
