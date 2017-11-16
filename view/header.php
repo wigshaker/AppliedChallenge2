@@ -19,7 +19,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="icons/apple-touch-icon-57x57.png" />
   </head>
 
-  <body onload="setTimeout('init();', 100);">
+  <body>
   <!--
     Clay Caylor
     default.html
