@@ -13,7 +13,7 @@ if (isset($user_add) && $pass_add === $pass_add_2) {
    } catch (Exception $e) {
       $message = $e->getMessage();
    }
-   include('.?action=add_user')
+   include('?action=add_user')
    break;
 
 } elseif ($pass_add !== $pass_add_2) {
