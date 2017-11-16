@@ -10,7 +10,7 @@ if (isset($user_add) && $pass_add === $pass_add_2) {
       $_SESSION['user_was_added'] = $user_add;
       $add_message = '';
    } catch (Exception $e) {
-      $message = $e->getMessage();
+      $add_message = $e->getMessage();
    }
    header('Location: .?action=add_user');
 
@@ -33,6 +33,8 @@ include 'view/header.php';
 <div role="main" class="ui-content">
    <h1>Add new User</h1>
 
+   <span class="error_message"><?php echo $add_message; ?></span>
+
    <form action="." method="post" id="add_user_form">
       <input type="hidden" name="action" value="add_user">
 
@@ -51,9 +53,6 @@ include 'view/header.php';
 
       <input type="submit" value="Welcome">
    </form>
-
-   <span class="error_message"><?php echo $add_message; ?></span>
-
 
 </div>
 
