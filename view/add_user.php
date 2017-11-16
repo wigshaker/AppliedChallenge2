@@ -17,12 +17,15 @@ if (isset($user_add) && $pass_add === $pass_add_2) {
 
 } elseif ($pass_add !== $pass_add_2) {
    $add_message = 'Passwords do not match.';
+   $_SESSION['user_was_added'] = '';
 
 } elseif (!isset($user_add)) {
    $add_message = "Let's get you signed up!.";
+   $_SESSION['user_was_added'] = '';
 
 } else {
    $add_message = 'Other error encountered.';
+   $_SESSION['user_was_added'] = '';
 }
 
 include 'view/header.php';
@@ -31,7 +34,7 @@ include 'view/header.php';
 <div role="main" class="ui-content">
    <h1>Add new User</h1>
 
-   <form action="." method="post" id="add_user_form">
+   <form action=".." method="post" id="add_user_form">
       <input type="hidden" name="action" value="add_user">
 
       <label>New Username:</label><br>
