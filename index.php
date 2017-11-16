@@ -56,14 +56,7 @@ switch($action) {
 			include('view/home.php');
 		} else {
 			include('view/add_user.php');
-			// if ($pass_add === $pass_add_2) {
-			//    add_user($user_add, $pass_add);
-			// 	$add_message = '';
-			// 	include('view/home.php');
-			// } elseif ($pass_add !== $pass_add_2) {
-			// 	$add_message = 'Passwords do not match.';
-			//    include('view/add_user.php');
-			// }
+			$add_message = 'Hit index, came back.'
 		}
 		break;
 
