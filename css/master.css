@@ -8,7 +8,7 @@
 /*.ui-content {padding: 0;}*/
 
 #mjpeg_dest {
-   margin: 0;
+   margin: auto;
    width: auto;
    height: 99.9vh;
    /*min-width: 100%;
@@ -19,14 +19,3 @@
    }
 
 /*.ui-page-theme-a .ui-bar-inherit {background-color: mediumaquamarine;}*/
-@media screen and (orientation: portrait)  {
-   #mjpeg_dest {
-      margin: 0;
-      width: 99.9vw;
-      height: auto;
-      flex: none;
-          justify-content: center;
-      }
-
-
-   }
