@@ -16,7 +16,8 @@
       // location.reload(true);
       doOnCallBack = function(){
         $("#log-list").listview("refresh");
-    }
+      }
+      $('#log-list').load(document.URL +  ' #log-list');
    };
 
    // $('#motion_options').click(
