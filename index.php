@@ -55,8 +55,8 @@ switch($action) {
 		if (isset($_SESSION['user_was_added']) && $_SESSION['user_was_added'] === $user_add) {
 			include('view/home.php');
 		} else {
-			include('view/add_user.php');
 			$add_message = 'Hit index, came back.';
+			include('view/add_user.php');
 		}
 		break;
 
