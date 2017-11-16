@@ -14,8 +14,9 @@
    source.onmessage = function(event) {
       // navigator.vibrate(300);
       // location.reload(true);
-      $('#log-list').load(document.URL +  ' #log-list');
-      complete: $('#log-list').load() {$("#log-list").listview("refresh");}
+      doOnCallBack = function(){
+        $("#log-list").listview("refresh");
+    }
    };
 
    // $('#motion_options').click(
