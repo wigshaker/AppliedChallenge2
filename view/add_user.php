@@ -34,7 +34,7 @@ include 'view/header.php';
 <div role="main" class="ui-content">
    <h1>Add new User</h1>
 
-   <form action=".." method="post" id="add_user_form">
+   <form action="." method="post" id="add_user_form">
       <input type="hidden" name="action" value="add_user">
 
       <label>New Username:</label><br>
