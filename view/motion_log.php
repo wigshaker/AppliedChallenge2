@@ -15,7 +15,7 @@
       // navigator.vibrate(300);
       // location.reload(true);
       $('#log-list').load(document.URL +  ' #log-list');
-      setTimeout('$("#log-list").listview("refresh")', 200);
+      complete: function() {$("#log-list").listview("refresh");}
    };
 
    // $('#motion_options').click(
