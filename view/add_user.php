@@ -19,7 +19,7 @@ if (isset($user_add) && $pass_add === $pass_add_2) {
    unset($_SESSION['user_was_added']);
 
 } elseif (!isset($user_add)) {
-   $add_message = "Let's get you signed up!.";
+   $add_message = "Let's get you signed up!";
    unset($_SESSION['user_was_added']);
 
 } else {
