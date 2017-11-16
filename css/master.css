@@ -25,9 +25,8 @@
       width: 99.9vw;
       height: auto;
       flex: none;
+          justify-content: center;
       }
 
-   #video_container {
-       justify-content: center;
-      }
+
    }
