@@ -1,4 +1,8 @@
-<?php include 'view/header.php'; ?>
+<?php
+include 'view/header.php';
+require_once('model/db.php');
+require_once('model/user_db.php');
+ ?>
 
 <div role="main" class="ui-content">
    <h1>Add new User</h1>

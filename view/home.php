@@ -8,7 +8,7 @@
       <li><a href="?action=show_live_view">Live Cam</a></li>
       <li><a href="?action=show_motion_log">Motion Detection Log</a></li>
       <li><a href="?action=logout">Log Out</a></li>
-      <li><a href="?action=add_user">Add a New User</a></li>
+      <li><a href="add_user.php">Add a New User</a></li>
    </ul>
 
 </div>
