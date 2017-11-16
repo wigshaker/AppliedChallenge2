@@ -1,7 +1,27 @@
 <?php
 include 'view/header.php';
-require_once('model/db.php');
-require_once('model/user_db.php');
+
+$user_add = filter_input(INPUT_POST, 'user_add');
+$pass_add = filter_input(INPUT_POST, 'pass_add');
+$pass_add_2 = filter_input(INPUT_POST, 'pass_add_2');
+
+if ($pass_add === $pass_add_2) {
+   try {
+      add_user($user_add, $pass_add);
+      $_SESSION['user_was_added'] = $user_add;
+      $add_message = '';
+   } catch (Exception $e) {
+      $message = $e->getMessage();
+   }
+   include('.?action=add_user')
+   break;
+
+} elseif ($pass_add !== $pass_add_2) {
+   $add_message = 'Passwords do not match.';
+
+} else {
+   $add_message = 'Other error encountered.';
+}
  ?>
 
 <div role="main" class="ui-content">
