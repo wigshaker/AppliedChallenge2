@@ -8,7 +8,7 @@
    $(document).on("pageinit",".ui-content",setTimeout('init();', 100));
 </script>
   <!-- onload="setTimeout('init();', 100);" -->
-<div role="main" class="ui-content">
+<div role="main" class="ui-content" id="video_container">
 
     <img id="mjpeg_dest" src="" width="1280" height="720" alt="Monitor Image"/>
 

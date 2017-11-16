@@ -24,7 +24,13 @@
       margin: 0;
       width: 99.9vw;
       height: auto;
+      flex: none;
+      }
 
-      -webkit-transform: translateX(-50%);
+   #video_container {
+       display: flex;
+       justify-content: center;
+       height: 400px; /* or other desired height */
+       overflow: hidden;
       }
    }
