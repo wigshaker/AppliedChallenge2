@@ -33,7 +33,7 @@ include 'view/header.php';
 <div role="main" class="ui-content">
    <h1>Add new User</h1>
 
-   <span class="error_message"><?php echo $add_message; ?></span>
+   <h3 class="error_message"><?php echo $add_message; ?></h3><br>
 
    <form action="." method="post" id="add_user_form">
       <input type="hidden" name="action" value="add_user">

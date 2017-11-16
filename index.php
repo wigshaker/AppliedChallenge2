@@ -52,7 +52,8 @@ switch($action) {
 		// $user_add = filter_input(INPUT_POST, 'user_add');
 		// $pass_add = filter_input(INPUT_POST, 'pass_add');
 		// $pass_add_2 = filter_input(INPUT_POST, 'pass_add_2');
-		if (isset($_SESSION['user_was_added']) && $_SESSION['user_was_added'] === $user_add) {
+		if (isset($_SESSION['user_was_added'])) {
+			$_SESSION['user_was_added'] = '';
 			include('view/home.php');
 			break;
 		} else {
