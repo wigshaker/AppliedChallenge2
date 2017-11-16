@@ -1,5 +1,4 @@
 <?php
-include 'view/header.php';
 
 $user_add = filter_input(INPUT_POST, 'user_add');
 $pass_add = filter_input(INPUT_POST, 'pass_add');
@@ -21,10 +20,12 @@ if (isset($user_add) && $pass_add === $pass_add_2) {
 
 } elseif (!isset($user_add)) {
    $add_message = "Let's get you signed up!.";
-   
+
 } else {
    $add_message = 'Other error encountered.';
 }
+
+include 'view/header.php';
  ?>
 
 <div role="main" class="ui-content">
