@@ -12,8 +12,7 @@ if (isset($user_add) && $pass_add === $pass_add_2) {
    } catch (Exception $e) {
       $message = $e->getMessage();
    }
-   include('.?action=add_user');
-   // break;
+   header('Location: .?action=add_user');
 
 } elseif ($pass_add !== $pass_add_2) {
    $add_message = 'Passwords do not match.';
