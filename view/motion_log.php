@@ -14,7 +14,7 @@
    source.onmessage = function(event) {
       // navigator.vibrate(300);
       // location.reload(true);
-      doOnCallBack = function(){
+      complete: function() {
         $("#log-list").listview("refresh");
       }
       $('#log-list').load(document.URL +  ' #log-list');
