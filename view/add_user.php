@@ -5,7 +5,7 @@ $user_add = filter_input(INPUT_POST, 'user_add');
 $pass_add = filter_input(INPUT_POST, 'pass_add');
 $pass_add_2 = filter_input(INPUT_POST, 'pass_add_2');
 
-if ($pass_add === $pass_add_2) {
+if (isset($user_add) && $pass_add === $pass_add_2) {
    try {
       add_user($user_add, $pass_add);
       $_SESSION['user_was_added'] = $user_add;
