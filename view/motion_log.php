@@ -13,10 +13,10 @@
    var source = new EventSource("model/msg_generator.php");
    source.onmessage = function(event) {
       // navigator.vibrate(300);
-      // location.reload(true);
-      $('#log-list').load(document.URL +  ' #log-list', function() {
-         $('#log-list').listview().listview('refresh');
-         });
+      location.reload(true);
+   //    $('#log-list').load(document.URL +  ' #log-list', function() {
+   //       $('#log-list').listview().listview('refresh');
+   //       });
    };
    // source.onmessage = setTimeout(function(event)  {
    //    $('#log-list').listview('refresh');
