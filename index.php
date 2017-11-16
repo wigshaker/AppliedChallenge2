@@ -41,12 +41,25 @@ switch($action) {
 
 	case 'show_motion_log':
 		if ($_POST['notification-enabled'] === '1') {
-			 $_SESSION['notification-enabled'] = '1';
-		 } elseif ($_POST['notification-enabled'] == '0') {
-		 	$_SESSION['notification-enabled'] = '0';
-		 }
-
+				$_SESSION['notification-enabled'] = '1';
+			} elseif ($_POST['notification-enabled'] == '0') {
+				$_SESSION['notification-enabled'] = '0';
+			}
 		include('view/motion_log.php');
+		break;
+
+	case 'add_user':
+		$user_add = filter_input(INPUT_POST, 'user_add');
+		$pass_add = filter_input(INPUT_POST, 'pass_add');
+		$pass_add_2 = filter_input(INPUT_POST, 'pass_add_2');
+		if ($pass_add === $pass_add_2) {
+		   add_user($user_add, $pass_add);
+			$add_message = '';
+			include('view/home.php');
+		} elseif ($pass_add !== $pass_add_2) {
+			$add_message = 'Passwords do not match.';
+		   include('view/add_user.php');
+		}
 		break;
 
 	case 'logout':

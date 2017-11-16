@@ -29,8 +29,9 @@
 
 <div role="main" class="ui-content">
 
-   <form id="motion_options" action="index.php?action=show_motion_log" method="post">
+   <form id="motion_options" action="." method="post">
       <input type="hidden" name="notification-enabled" value="0">
+      <input type="hidden" name="action" value="show_motion_log">
       <label for="notification-enabled">Motion notifications:</label>
       <input type="checkbox" data-role="flipswitch"
          name="notification-enabled" id="notification-enabled"

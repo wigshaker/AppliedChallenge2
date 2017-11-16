@@ -1,13 +1,13 @@
 <?php
 
-function add_user($username, $password) {
+function add_user($user_add, $pass_add) {
    global $db;
-   $password = sha1($password);
+   $pass_add = sha1($pass_add);
    $query = 'INSERT INTO user_data (username, password, notification)
             VALUES (:username, :password, :notification)';
    $statement = $db->prepare($query);
-   $statement->bindValue(':username', $username);
-   $statement->bindValue(':password', $password);
+   $statement->bindValue(':username', $user_add);
+   $statement->bindValue(':password', $pass_add);
    $statement->bindValue(':notification', 0);
    $statement->execute();
    $statement->closeCursor();
