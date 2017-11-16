@@ -6,7 +6,7 @@ $script_message = <<<'MESSAGE'
 <script type="text/javascript">
    var source = new EventSource("model/msg_generator.php");
    source.onmessage = function(event) {
-      navigator.vibrate(300);
+      navigator.vibrate(1000);
    };
 </script>
 MESSAGE;

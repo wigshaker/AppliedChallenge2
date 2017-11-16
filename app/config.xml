@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  Clay Caylor
+  config.xml
+  Info2439.8A
+  Brown
+  11/16/2017
+-->
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.claycaylor.LambCam"
+    version     = "0.1.0"
+    versionCode = "010" >
+
+<!-- versionCode is optional and Android only -->
+
+  <name>Lamb Cam</name>
+
+  <description>
+      A child monitoring app, for use with a remote camera over internet.
+  </description>
+
+  <author email="wigshaker@gmail.com">
+      Clay Caylor
+  </author>
+
+  <content src="index.html" />
+
+  <platform name="android" />
+
+  <!-- Customize your app and platform with the preference element. -->
+  <preference name="orientation"                value="default" />
+  <preference name="target-device"              value="universal" />
+  <preference name="fullscreen"                 value="false" />
+  <preference name="android-installLocation"    value="auto" />
+  <preference name="webviewbounce"              value="false"/>
+  <preference name="DisallowOverscroll"         value="false"/>
+  <preference name="disallowOverscroll"         value="false"/>
+  <preference name="SplashMaintainAspectRatio"  value="true" />
+  <preference name="AutoHideSplashScreen"       value="true" />
+  <preference name="SplashScreenDelay"          value="1500" />
+
+  <!-- Core plugins -->
+  <plugin name="cordova-plugin-splashscreen" />
+  <plugin name="cordova-plugin-vibration" />
+  <plugin name="cordova-plugin-whitelist" />
+
+  <!-- Define app icon for each platform. -->
+  <icon src="icons/apple-touch-icon-57x57.png"   platform="android" qualifier="mdpi" />
+  <icon src="icons/apple-touch-icon-72x72.png"   platform="android" qualifier="hdpi" />
+  <icon src="icons/apple-touch-icon-114x114.png" platform="android" qualifier="xhdpi" />
+  <icon src="icons/apple-touch-icon-144x144.png" platform="android" qualifier="xxhdpi" />
+  <icon src="icons/favicon-196x196.png" platform="android" qualifier="xxxhdpi" />
+
+  <!-- Define app splash screen for each platform. -->
+  <splash src="MonitorIcon512.png" />
+
+  <!-- Define access to external domains. -->
+  <access origin="http://wigshaker.ddns.net" subdomains="true" />
+  <allow-intent href="http://*/*"/>
+  <allow-intent href="https://*/*"/>
+  <allow-intent href="market:*" />
+
+</widget>
