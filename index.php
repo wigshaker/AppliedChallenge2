@@ -3,7 +3,7 @@
 session_start();
 require_once('model/db.php');
 require_once('model/user_db.php');
-require_once('model/infrared.php');
+// require_once('model/infrared.php');
 
 // Get the action to perform
 $action = filter_input(INPUT_POST, 'action');
