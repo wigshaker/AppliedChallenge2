@@ -3,6 +3,7 @@
 session_start();
 require_once('model/db.php');
 require_once('model/user_db.php');
+require_once('model/infrared.php');
 
 // Get the action to perform
 $action = filter_input(INPUT_POST, 'action');
@@ -50,7 +51,15 @@ switch($action) {
 			} elseif ($_POST['ir-enabled'] == '0') {
 				$_SESSION['ir-enabled'] = '0';
 			}
-		include('model/infrared.php');
+
+		// Turn IR LED pins on or off, for nightvision.
+	   if (!isset($_SESSION['ir_enabled']) {
+	      $ir_pin->setValue(PinInterface::VALUE_LOW);
+	   } else if ($_SESSION['ir_enabled'] == '0') {
+	      $ir_pin->setValue(PinInterface::VALUE_LOW);
+	   } else if ($_SESSION['ir_enabled'] === '1') {
+	      $ir_pin->setValue(PinInterface::VALUE_HIGH);
+	   }
 		include('view/motion_log.php');
 		break;
 
