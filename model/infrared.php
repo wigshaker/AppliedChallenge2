@@ -11,11 +11,18 @@
    $ir_pin = $gpio->getOutputPin(4);
 
    // Turn IR LED pins on or off, for nightvision.
-   if (!isset($_SESSION['ir_enabled']) {
-      $ir_pin->setValue(PinInterface::VALUE_LOW);
-   } else if ($_SESSION['ir_enabled'] == '0') {
-      $ir_pin->setValue(PinInterface::VALUE_LOW);
-   } else if ($_SESSION['ir_enabled'] === '1') {
-      $ir_pin->setValue(PinInterface::VALUE_HIGH);
+   try {
+      if (!isset($_SESSION['ir_enabled']) {
+         $ir_pin->setValue(PinInterface::VALUE_LOW);
+      } else if ($_SESSION['ir_enabled'] == '0') {
+         $ir_pin->setValue(PinInterface::VALUE_LOW);
+      } else if ($_SESSION['ir_enabled'] === '1') {
+         $ir_pin->setValue(PinInterface::VALUE_HIGH);
+      }
+   } catch (Exception $e) {
+      $error_message = $e->getMessage();
+      include('view/error.php');
+      exit();
    }
+
  ?>
