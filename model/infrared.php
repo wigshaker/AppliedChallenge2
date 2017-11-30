@@ -2,7 +2,7 @@
    session_start();
    require_once 'vendor/autoload.php';
    use PiPHP\GPIO\GPIO;
-   use PiPHP\GPIO\Pin\PinInterface;
+   use PiPHP\GPIO\Pin\OutputPinInterface;
 
    // Create a GPIO object
    $gpio = new GPIO();
@@ -13,11 +13,11 @@
    // Turn IR LED pins on or off, for nightvision.
    try {
       if (!isset($_SESSION['ir_enabled']) {
-         $ir_pin->setValue(PinInterface::VALUE_LOW);
+         $ir_pin->setValue(OutputPinInterface::VALUE_LOW);
       } else if ($_SESSION['ir_enabled'] == '0') {
-         $ir_pin->setValue(PinInterface::VALUE_LOW);
+         $ir_pin->setValue(OutputPinInterface::VALUE_LOW);
       } else if ($_SESSION['ir_enabled'] === '1') {
-         $ir_pin->setValue(PinInterface::VALUE_HIGH);
+         $ir_pin->setValue(OutputPinInterface::VALUE_HIGH);
       }
    } catch (Exception $e) {
       $error_message = $e->getMessage();
