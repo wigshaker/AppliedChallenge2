@@ -50,6 +50,7 @@ switch($action) {
 			} elseif ($_POST['ir-enabled'] == '0') {
 				$_SESSION['ir-enabled'] = '0';
 			}
+		include('model/infrared.php');
 		include('view/motion_log.php');
 		break;
 
