@@ -29,11 +29,18 @@
    <form id="motion_options" action="." method="post">
       <input type="hidden" name="notification-enabled" value="0">
       <input type="hidden" name="action" value="show_motion_log">
+
       <label for="notification-enabled">Motion notifications:</label>
       <input type="checkbox" data-role="flipswitch"
          name="notification-enabled" id="notification-enabled"
           value="1" onchange="$('#motion_options').submit()"
          <?php if ($_SESSION['notification-enabled'] === '1') {echo 'checked';} ?>>
+
+      <label for="ir-enabled">Infrared LEDs:</label>
+      <input type="checkbox" data-role="flipswitch"
+         name="ir-enabled" id="ir-enabled"
+          value="1" onchange="$('#motion_options').submit()"
+         <?php if ($_SESSION['ir-enabled'] === '1') {echo 'checked';} ?>>
    </form>
 
    <ul data-role="listview" data-inset="true" id="log-list">

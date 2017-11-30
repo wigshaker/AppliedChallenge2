@@ -45,6 +45,11 @@ switch($action) {
 			} elseif ($_POST['notification-enabled'] == '0') {
 				$_SESSION['notification-enabled'] = '0';
 			}
+		if ($_POST['ir-enabled'] === '1') {
+				$_SESSION['ir-enabled'] = '1';
+			} elseif ($_POST['ir-enabled'] == '0') {
+				$_SESSION['ir-enabled'] = '0';
+			}
 		include('view/motion_log.php');
 		break;
 
