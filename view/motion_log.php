@@ -27,16 +27,17 @@
 <div role="main" class="ui-content">
 
    <form id="motion_options" action="." method="post">
-      <input type="hidden" name="notification-enabled" value="0">
       <input type="hidden" name="action" value="show_motion_log">
 
       <label for="notification-enabled">Motion notifications:</label>
+      <input type="hidden" name="notification-enabled" value="0">
       <input type="checkbox" data-role="flipswitch"
          name="notification-enabled" id="notification-enabled"
           value="1" onchange="$('#motion_options').submit()"
          <?php if ($_SESSION['notification-enabled'] === '1') {echo 'checked';} ?>>
 
       <label for="ir-enabled">Infrared LEDs:</label>
+      <input type="hidden" name="ir-enabled" value="0">
       <input type="checkbox" data-role="flipswitch"
          name="ir-enabled" id="ir-enabled"
           value="1" onchange="$('#motion_options').submit()"
