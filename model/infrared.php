@@ -1,8 +1,8 @@
 <?php
    session_start();
    require_once 'vendor/autoload.php';
-   use vendor/piphp/gpio/GPIO.php;
-   use vendor/piphp/gpio/Pin/PinInterface.php;
+   use PiPHP\GPIO\GPIO;
+   use PiPHP\GPIO\Pin\PinInterface;
 
    // Create a GPIO object
    $gpio = new GPIO();

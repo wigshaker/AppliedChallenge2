@@ -1,7 +1,6 @@
 <?php
    session_start();
    include 'view/header.php';
-   include('model/infrared');
    require_once('model/valid_user.php');
 
    // if (isset($_POST['notification-enabled']) = true) {
