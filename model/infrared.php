@@ -12,9 +12,9 @@
    // Set the value of the pin high or low (turn it on or off)
    if (!isset($_SESSION['ir_enabled']) {
       $ir_pin->setValue(PinInterface::VALUE_LOW);
-   } else if ($_SESSION['ir_enabled'] === '0') {
+   } else if ($_SESSION['ir_enabled'] == '0') {
       $ir_pin->setValue(PinInterface::VALUE_LOW);
-   } elseif ($_SESSION['ir_enabled'] === '1') {
+   } else if ($_SESSION['ir_enabled'] === '1') {
       $ir_pin->setValue(PinInterface::VALUE_HIGH);
    }
 
