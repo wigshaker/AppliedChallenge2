@@ -1,7 +1,7 @@
 <?php
    session_start();
-   include vendor/piphp/gpio/src/GPIO.php;
-   include vendor/piphp/gpio/src/Pin/PinInterface.php;
+   include vendor/piphp/gpio/GPIO.php;
+   include vendor/piphp/gpio/Pin/PinInterface.php;
 
    // Create a GPIO object
    $gpio = new GPIO();
