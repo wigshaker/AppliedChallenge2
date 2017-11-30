@@ -52,14 +52,7 @@ switch($action) {
 				$_SESSION['ir-enabled'] = '0';
 			}
 
-		// Turn IR LED pins on or off, for nightvision.
-	   if (!isset($_SESSION['ir_enabled']) {
-	      $ir_pin->setValue(PinInterface::VALUE_LOW);
-	   } else if ($_SESSION['ir_enabled'] == '0') {
-	      $ir_pin->setValue(PinInterface::VALUE_LOW);
-	   } else if ($_SESSION['ir_enabled'] === '1') {
-	      $ir_pin->setValue(PinInterface::VALUE_HIGH);
-	   }
+		include('model/infrared');
 		include('view/motion_log.php');
 		break;
 
