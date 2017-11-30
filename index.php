@@ -52,7 +52,7 @@ switch($action) {
 				$_SESSION['ir-enabled'] = '0';
 			}
 
-		include('model/infrared');
+		// include('model/infrared');
 		include('view/motion_log.php');
 		break;
 
