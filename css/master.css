@@ -11,7 +11,8 @@
    margin: 0;
    width: auto;
    height: 99.9vh;
+}
 
-   }
-
-/*.ui-page-theme-a .ui-bar-inherit {background-color: mediumaquamarine;}*/
+.ui-flipswitch.ui-flipswitch-active{
+   width: auto;
+}
