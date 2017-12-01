@@ -42,9 +42,15 @@ switch($action) {
 		break;
 
 	case 'show_motion_log':
+		// if ($_POST['notification-enabled'] === '1') {
+		// 	$_SESSION['notification-enabled'] = '1';
+		// } elseif ($_POST['notification-enabled'] == '0') {
+		// 	$_SESSION['notification-enabled'] = '0';
+		// }
+
 		if ($_POST['notification-enabled'] === '1') {
 			$_SESSION['notification-enabled'] = '1';
-		} elseif ($_POST['notification-enabled'] == '0') {
+		} else {
 			$_SESSION['notification-enabled'] = '0';
 		}
 
