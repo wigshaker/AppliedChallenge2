@@ -24,7 +24,7 @@
          <option value="0">Off</option>
          <option value="1"
             <?php if ($_SESSION['notification-enabled'] === '1') {
-               // echo 'selected="selected"';
+               echo 'selected="selected"';
             } ?>
             >On</option>
       </select>
