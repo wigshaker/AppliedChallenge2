@@ -60,7 +60,7 @@
 </div>
 
 <script type="text/javascript">
-   $("#notification-enabled").val("1").flipswitch("refresh");
+   $("#notification-enabled").slider("refresh");
 </script>
 
 <?php include 'view/footer.php'; ?>
