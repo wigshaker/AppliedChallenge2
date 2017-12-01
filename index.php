@@ -1,6 +1,7 @@
 <?php
 // Start session management and include necessary functions
 session_start();
+require_once('vendor/autoload.php');
 require_once('model/db.php');
 require_once('model/user_db.php');
 // require_once('model/infrared.php');
