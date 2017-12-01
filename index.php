@@ -61,7 +61,9 @@ switch($action) {
 	      include('view/error.php');
 	      exit();
 		}
+		QuantumPHP::add('OK');
 		QuantumPHP::add($CLIerror);
+		QuantumPHP::send();
 		// include('model/infrared.php');
 		include('view/motion_log.php');
 		break;
