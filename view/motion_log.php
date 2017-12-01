@@ -30,11 +30,15 @@
       <input type="hidden" name="action" value="show_motion_log">
 
       <label for="notification-enabled">Motion notifications:</label>
-      <!-- <input type="hidden" name="notification-enabled" value="0"> -->
-      <input type="checkbox" data-role="flipswitch"
-         name="notification-enabled" id="notification-enabled"
-          value="1" onchange="$('#motion_options').submit()"
-         <?php if ($_SESSION['notification-enabled'] === '1') {echo 'checked';} ?>>
+      <select name="notification-enabled" id="notification-enabled"
+         data-role="flipswitch" onchange="$('#motion_options').submit()">
+         <option value="0">Off</option>
+         <option value="1"
+            <?php if ($_SESSION['notification-enabled'] === '1') {
+               echo 'selected="selected"';
+            } ?>
+            >On</option>
+      </select>
 
       <label for="ir-enabled">Infrared LEDs:</label>
       <input type="hidden" name="ir-enabled" value="0">
