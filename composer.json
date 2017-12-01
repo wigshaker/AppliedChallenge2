@@ -1,5 +1,6 @@
 {
     "require": {
-        "piphp/gpio": "^0.3.3"
+        "piphp/gpio": "^0.3.3",
+        "frankforte/quantumphp": "^1.0"
     }
 }

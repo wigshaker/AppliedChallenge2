@@ -40,5 +40,55 @@
             "pins",
             "raspberry"
         ]
+    },
+    {
+        "name": "frankforte/quantumphp",
+        "version": "1.0.9",
+        "version_normalized": "1.0.9.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/frankforte/quantumphp.git",
+            "reference": "e5a465517992e7cb673a0f70fdb0b97c5985b6ac"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/frankforte/quantumphp/zipball/e5a465517992e7cb673a0f70fdb0b97c5985b6ac",
+            "reference": "e5a465517992e7cb673a0f70fdb0b97c5985b6ac",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6.0"
+        },
+        "time": "2017-11-28T19:46:41+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "QuantumPHP": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Craig Campbell",
+                "email": "iamcraigcampbell@gmail.com",
+                "homepage": "http://craig.is",
+                "role": "Developer"
+            },
+            {
+                "name": "Frank Forte",
+                "email": "frank.forte@gmail.com",
+                "homepage": "https://www.frankforte.ca",
+                "role": "Developer"
+            }
+        ],
+        "description": "Add server side logs directly to the JavaScript console in various browsers like Firefox Quantum, without the requirement of a browser extension or add-on. A FirePHP and ChromePHP alternative for modern browsers",
+        "keywords": [
+            "logging",
+            "server log"
+        ]
     }
 ]

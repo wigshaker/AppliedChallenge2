@@ -4,8 +4,56 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1f43e0c51eb02f1a740bad504db24a34",
+    "content-hash": "ba6bbbe064500e7a9188eb671be72eff",
     "packages": [
+        {
+            "name": "frankforte/quantumphp",
+            "version": "1.0.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/frankforte/quantumphp.git",
+                "reference": "e5a465517992e7cb673a0f70fdb0b97c5985b6ac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/frankforte/quantumphp/zipball/e5a465517992e7cb673a0f70fdb0b97c5985b6ac",
+                "reference": "e5a465517992e7cb673a0f70fdb0b97c5985b6ac",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "QuantumPHP": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Craig Campbell",
+                    "email": "iamcraigcampbell@gmail.com",
+                    "homepage": "http://craig.is",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Frank Forte",
+                    "email": "frank.forte@gmail.com",
+                    "homepage": "https://www.frankforte.ca",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Add server side logs directly to the JavaScript console in various browsers like Firefox Quantum, without the requirement of a browser extension or add-on. A FirePHP and ChromePHP alternative for modern browsers",
+            "keywords": [
+                "logging",
+                "server log"
+            ],
+            "time": "2017-11-28T19:46:41+00:00"
+        },
         {
             "name": "piphp/gpio",
             "version": "v0.3.3",
