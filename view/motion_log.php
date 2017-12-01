@@ -41,11 +41,15 @@
       </select>
 
       <label for="ir-enabled">Infrared LEDs:</label>
-      <input type="hidden" name="ir-enabled" value="0">
-      <input type="checkbox" data-role="flipswitch"
-         name="ir-enabled" id="ir-enabled"
-          value="1" onchange="$('#motion_options').submit()"
-         <?php if ($_SESSION['ir-enabled'] === '1') {echo 'checked';} ?>>
+      <select name="ir-enabled" id="ir-enabled"
+         data-role="flipswitch" onchange="$('#motion_options').submit()">
+         <option value="0">Off</option>
+         <option value="1"
+            <?php if ($_SESSION['ir-enabled'] === '1') {
+               echo 'selected="selected"';
+            } ?>
+            >On</option>
+      </select>
    </form>
 
    <ul data-role="listview" data-inset="true" id="log-list">
