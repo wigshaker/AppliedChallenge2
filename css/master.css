@@ -13,6 +13,6 @@
    height: 99.9vh;
 }
 
-.ui-flipswitch.ui-flipswitch-active{
-   width: 5.875em;
+ .ui-flipswitch.ui-flipswitch-active {
+   width: 5.875em !important;
 }
