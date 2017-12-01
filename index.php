@@ -51,10 +51,10 @@ switch($action) {
 		try {
 			if ($_POST['ir-enabled'] === '1') {
 				$_SESSION['ir-enabled'] = '1';
-				system ('sudo gpio -g write 4 1', $CLIerror);
+				system ('gpio -g write 4 1', $CLIerror);
 			} elseif ($_POST['ir-enabled'] == '0') {
 				$_SESSION['ir-enabled'] = '0';
-				system ('sudo gpio -g write 4 0', $CLIerror);
+				system ('gpio -g write 4 0', $CLIerror);
 			}
 		} catch (Exception $e) {
 			$error_message = $e->getMessage();
