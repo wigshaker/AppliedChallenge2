@@ -47,10 +47,18 @@ switch($action) {
 			$_SESSION['notification-enabled'] = '0';
 		}
 
-		if ($_POST['ir-enabled'] === '1') {
-			$_SESSION['ir-enabled'] = '1';
-		} elseif ($_POST['ir-enabled'] == '0') {
-			$_SESSION['ir-enabled'] = '0';
+		try {
+			if ($_POST['ir-enabled'] === '1') {
+				$_SESSION['ir-enabled'] = '1';
+				system ('sudo gpio -g write 4 1');
+			} elseif ($_POST['ir-enabled'] == '0') {
+				$_SESSION['ir-enabled'] = '0';
+				system ('sudo gpio -g write 4 0');
+			}
+		} catch (Exception $e) {
+			$error_message = $e->getMessage();
+	      include('view/error.php');
+	      exit();
 		}
 
 		// include('model/infrared.php');
