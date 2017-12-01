@@ -41,6 +41,10 @@
       </select>
    </form>
 
+   <script type="text/javascript">
+      $("#notification-enabled").selectmenu("refresh");
+   </script>
+   
    <ul data-role="listview" data-inset="true" id="log-list">
       <li data-role="list-divider">Motion Times</li>
       <?php
@@ -59,8 +63,5 @@
 
 </div>
 
-<script type="text/javascript">
-   $("#notification-enabled").slider("refresh");
-</script>
 
 <?php include 'view/footer.php'; ?>
