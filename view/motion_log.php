@@ -10,8 +10,6 @@
    source.onmessage = function(event) {
       location.reload(true);
    };
-
-   $("#notification-enabled").val("1").flipswitch("refresh");
 </script>
 
 
@@ -60,5 +58,9 @@
    </ul>
 
 </div>
+
+<script type="text/javascript">
+   $("#notification-enabled").val("1").flipswitch("refresh");
+</script>
 
 <?php include 'view/footer.php'; ?>
