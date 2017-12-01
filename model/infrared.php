@@ -13,11 +13,11 @@
    // Turn IR LED pins on or off, for nightvision.
    try {
       if (!isset($_SESSION['ir_enabled']) {
-         system ( "sudo gpio -g write 4 0" );
+         system ( 'sudo gpio -g write 4 0' );
       } else if ($_SESSION['ir_enabled'] == '0') {
-         system ( "sudo gpio -g write 4 0" );
+         system ( 'sudo gpio -g write 4 0' );
       } else if ($_SESSION['ir_enabled'] === '1') {
-         system ( "sudo gpio -g write 4 1" );
+         system ( 'sudo gpio -g write 4 1' );
       }
    } catch (Exception $e) {
       $error_message = $e->getMessage();
