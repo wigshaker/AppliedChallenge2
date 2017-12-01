@@ -62,6 +62,7 @@ switch($action) {
 	      exit();
 		}
 		QuantumPHP::add('OK');
+		QuantumPHP::add('IRpost ' . $_POST['ir-enabled']);
 		QuantumPHP::add($CLIerror);
 		QuantumPHP::send();
 		// include('model/infrared.php');
