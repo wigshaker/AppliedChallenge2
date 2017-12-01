@@ -2,25 +2,16 @@
    session_start();
    include 'view/header.php';
    require_once('model/valid_user.php');
-
-   // if (isset($_POST['notification-enabled']) = true) {
-   //     $_SESSION['notification-enabled'] = true;
-   //  }
  ?>
 
 <script type="text/javascript">
    //SSE triggers Motion Vibration and Log updater
    var source = new EventSource("model/msg_generator.php");
    source.onmessage = function(event) {
-      // navigator.vibrate(300);
       location.reload(true);
-   //    $('#log-list').load(document.URL +  ' #log-list', function() {
-   //       $('#log-list').listview().listview('refresh');
-   //       });
    };
-   // source.onmessage = setTimeout(function(event)  {
-   //    $('#log-list').listview('refresh');
-   // }, 200);
+
+   $("#notification-enabled").val("1").flipswitch("refresh");
 </script>
 
 
@@ -35,7 +26,7 @@
          <option value="0">Off</option>
          <option value="1"
             <?php if ($_SESSION['notification-enabled'] === '1') {
-               echo 'selected="selected"';
+               // echo 'selected="selected"';
             } ?>
             >On</option>
       </select>
