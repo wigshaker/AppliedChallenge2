@@ -17,6 +17,6 @@
    width: 5.875em !important;
 }
 
-body {
+.ui-page {
    background: url("../fleece_bg.jpg") cover;
 }
