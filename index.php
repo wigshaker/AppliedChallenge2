@@ -4,7 +4,6 @@ session_start();
 require_once('vendor/autoload.php');
 require_once('model/db.php');
 require_once('model/user_db.php');
-// require_once('model/infrared.php');
 
 // Get the action to perform
 $action = filter_input(INPUT_POST, 'action');
@@ -41,38 +40,28 @@ switch($action) {
 		include('view/live_view.php');
 		break;
 
-	case 'show_motion_log':
+	case 'show_options_log':
+		// Notification Option transfer
 		if ($_POST['notification-enabled'] === '1') {
 			$_SESSION['notification-enabled'] = '1';
 		} elseif ($_POST['notification-enabled'] == '0') {
 			$_SESSION['notification-enabled'] = '0';
 		}
 
-		try {
-			if ($_POST['ir-enabled'] === '1') {
-				$_SESSION['ir-enabled'] = '1';
-				system ('gpio -g write 4 1', $CLIerror);
-			} elseif ($_POST['ir-enabled'] == '0') {
-				$_SESSION['ir-enabled'] = '0';
-				system ('gpio -g write 4 0', $CLIerror);
-			}
-		} catch (Exception $e) {
-			$error_message = $e->getMessage();
-	      include('view/error.php');
-	      exit();
+		// IR Nightvision Option toggle and transfer
+		system ('gpio -g mode 4 out');
+		if ($_POST['ir-enabled'] === '1') {
+			$_SESSION['ir-enabled'] = '1';
+			system ('gpio -g write 4 1');
+		} elseif ($_POST['ir-enabled'] == '0') {
+			$_SESSION['ir-enabled'] = '0';
+			system ('gpio -g write 4 0');
 		}
-		QuantumPHP::add('OK');
-		QuantumPHP::add('IRpost ' . $_POST['ir-enabled']);
-		QuantumPHP::add($CLIerror);
-		QuantumPHP::send();
-		// include('model/infrared.php');
-		include('view/motion_log.php');
+
+		include('view/options_log.php');
 		break;
 
 	case 'add_user':
-		// $user_add = filter_input(INPUT_POST, 'user_add');
-		// $pass_add = filter_input(INPUT_POST, 'pass_add');
-		// $pass_add_2 = filter_input(INPUT_POST, 'pass_add_2');
 		if (isset($_SESSION['user_was_added'])) {
 			unset($_SESSION['user_was_added']);
 			include('view/home.php');
@@ -86,7 +75,6 @@ switch($action) {
 
 	case 'logout':
 		$_SESSION = array();   // Clear all session data from memory
-		// session_write_close();
 		session_destroy();     // Clean up the session ID
 		include('view/login.php');
 		break;

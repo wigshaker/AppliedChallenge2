@@ -15,12 +15,12 @@
 
 <div role="main" class="ui-content">
 
-   <form id="motion_options" action="." method="post">
-      <input type="hidden" name="action" value="show_motion_log">
+   <form id="options" action="." method="post">
+      <input type="hidden" name="action" value="show_options_log">
 
       <label for="notification-enabled">Motion notifications:</label>
       <select name="notification-enabled" id="notification-enabled"
-         data-role="flipswitch" onchange="$('#motion_options').submit()">
+         data-role="flipswitch" onchange="$('#options').submit()">
          <option value="0">Off</option>
          <option value="1"
             <?php if ($_SESSION['notification-enabled'] === '1') {
@@ -31,7 +31,7 @@
 
       <label for="ir-enabled">Infrared LEDs:</label>
       <select name="ir-enabled" id="ir-enabled"
-         data-role="flipswitch" onchange="$('#motion_options').submit()">
+         data-role="flipswitch" onchange="$('#options').submit()">
          <option value="0">Off</option>
          <option value="1"
             <?php if ($_SESSION['ir-enabled'] === '1') {
