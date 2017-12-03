@@ -20,7 +20,7 @@
 .ui-overlay-a, .ui-page-theme-a {background-color: transparent;}
 
 .ui-page, .ui-page-theme-a {background-color: transparent;
-   background-image: url("../fleece_bg.jpg");
+   background-image: url(../fleece_bg.jpg);
    background-repeat: no-repeat;
    background-size: cover;
    background-attachment: fixed;
