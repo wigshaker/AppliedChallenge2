@@ -16,3 +16,7 @@
 .ui-flipswitch-active {
    width: 5.875em !important;
 }
+
+body {
+   background: url("../fleece_bg.jpg") cover;
+}
