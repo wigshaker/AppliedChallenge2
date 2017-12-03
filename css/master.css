@@ -17,6 +17,7 @@
    width: 5.875em !important;
 }
 
-.ui-page {
+.ui-page, .ui-page-theme-a {
+   background-color: none;
    background: url("../fleece_bg.jpg") cover;
 }
