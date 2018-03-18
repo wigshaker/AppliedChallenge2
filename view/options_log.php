@@ -49,7 +49,7 @@
       <li data-role="list-divider">Motion Times</li>
       <?php
          try {
-            $motion_array = file('../motionLog.txt');
+            $motion_array = file('../RPiCam/motionLog.txt');
          } catch (Exception $ex) {
             $motion_array[0] = 'Error connecting to motionLog.txt';
          }
