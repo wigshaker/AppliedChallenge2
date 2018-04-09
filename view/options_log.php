@@ -1,5 +1,5 @@
 <?php
-   session_start();
+   //session_start();
    include 'view/header.php';
    require_once('model/valid_user.php');
  ?>
