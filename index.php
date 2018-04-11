@@ -1,6 +1,6 @@
 <?php
 // Start session management
-$session_lifetime=600;		//Set lifetime variable for session cookies
+$session_lifetime=10*24*60*60;		//Set lifetime variable for session cookies
 session_set_cookie_params($session_lifetime, '/');		//Set lifetime and path-access for new cookies
 session_start();
 setcookie(session_name(),session_id(),time()+$session_lifetime);		// Refresh lifetime upon revisit
